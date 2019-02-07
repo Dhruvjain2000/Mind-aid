@@ -17,6 +17,7 @@ import java.util.List;
 public class BoardingActivity extends AhoyOnboarderActivity {
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +29,8 @@ public class BoardingActivity extends AhoyOnboarderActivity {
         ahoyOnboarderCard1.setBackgroundColor(R.color.black_transparent);
         ahoyOnboarderCard2.setBackgroundColor(R.color.black_transparent);
         ahoyOnboarderCard3.setBackgroundColor(R.color.black_transparent);
+
+
 
         List<AhoyOnboarderCard> pages = new ArrayList<>();
 
