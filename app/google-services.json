@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "302083470270",
+    "firebase_url": "https://mind-aid.firebaseio.com",
+    "project_id": "mind-aid",
+    "storage_bucket": "mind-aid.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:302083470270:android:875826f41b75eba4",
+        "android_client_info": {
+          "package_name": "com.example.android.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "302083470270-os0915h6p7qi9dpto64rh867h85eog2b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.android.myapplication",
+            "certificate_hash": "738ed68cb5dcd66d4c3e819c7688f1d9ef649a10"
+          }
+        },
+        {
+          "client_id": "302083470270-20ckufom11fnv6tldmj6p2pnt5hntlk6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFcy_GcuWJU0lqNiuk_MzUtw8UPrRnFmY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "302083470270-20ckufom11fnv6tldmj6p2pnt5hntlk6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
