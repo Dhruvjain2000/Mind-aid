@@ -23,7 +23,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Maps.MapsActivity">
+        <activity android:name=".BoardingActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -44,7 +44,7 @@
         <!-- <activity android:name=".Auth.FacebookLoginActivity" /> -->
         <activity android:name=".Music.MusicActivity" />
         <activity android:name=".SpaceWars.Spacewar" />
-        <activity android:name=".BoardingActivity"></activity>
+        <activity android:name=".Maps.MapsActivity"></activity>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
