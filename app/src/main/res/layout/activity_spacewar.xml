@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SpaceWars.Spacewar"
+    android:background="@color/grey">
+
+    <com.example.android.myapplication.SpaceWars.Spaceship
+        android:id="@+id/table"
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:layout_above="@+id/upBtn"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/dark" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Left"
+        android:id="@+id/leftBtn"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/downBtn"
+        android:layout_toStartOf="@+id/downBtn" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Right"
+        android:id="@+id/rightBtn"
+        android:layout_below="@+id/upBtn"
+        android:layout_toRightOf="@+id/downBtn"
+        android:layout_toEndOf="@+id/downBtn" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Down"
+        android:id="@+id/downBtn"
+        android:layout_alignTop="@+id/leftBtn"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Up"
+        android:id="@+id/upBtn"
+        android:layout_above="@+id/downBtn"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FIRE!"
+        android:id="@+id/fireBtn"
+        android:layout_above="@+id/rightBtn"
+        android:layout_toRightOf="@+id/rightBtn"
+        android:layout_toEndOf="@+id/rightBtn" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/score"
+        android:id="@+id/score"
+        android:layout_alignBottom="@+id/upBtn"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/red"
+        android:paddingLeft="40dp" />
+
+
+</RelativeLayout>

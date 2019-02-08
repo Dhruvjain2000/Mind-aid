@@ -28,6 +28,9 @@
     <color name="third">#74204d</color>
     <color name="fourth">#9d2a58</color>
 
+    <color name="dark">#0f0f0f</color>
+    <color name="grey">#151616</color>
+    <color name="red">#ff0000</color>
 
     <array name="rainbow">
 
