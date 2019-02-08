@@ -12,7 +12,6 @@ import android.widget.TextView
 import com.example.android.myapplication.Fragments.SongPlayingFragment
 import com.example.android.myapplication.Music.Songs
 import com.example.android.myapplication.R
-import com.google.android.gms.common.config.GservicesValue.init
 
 class MusicScreenAdapter(_songDetails: ArrayList<Songs>, _context: Context) : RecyclerView.Adapter<MusicScreenAdapter.MyViewHolder>() {
 
