@@ -8,8 +8,9 @@
     <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
-    <uses-feature android:glEsVersion="0x00020000" android:required="true" />
-
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -36,8 +37,9 @@
         <activity android:name=".Auth.BaseActivity" />
         <activity android:name=".Auth.PhoneAuthActivity" />
         <activity android:name=".Auth.AnonymousActivity" />
-        <!--<activity android:name=".Auth.FacebookLoginActivity" />-->
-        <activity android:name=".Music.MusicActivity"></activity>
+        <!-- <activity android:name=".Auth.FacebookLoginActivity" /> -->
+        <activity android:name=".Music.MusicActivity" />
+        <activity android:name=".SpaceWars.Spacewar" />
     </application>
 
 </manifest>
