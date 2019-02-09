@@ -3,8 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/guillotine_background"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".MenuScreen">
 
     <android.support.v7.widget.Toolbar
         style="@style/Toolbar"
@@ -24,10 +26,12 @@
 
         <ImageView
             style="@style/ImageView.GuillotineItem"
-            android:src="@drawable/ic_profile" />
+            android:src="@drawable/anonymous" />
 
-        <com.example.android.myapplication.Widget.CanaroTextView
+        <Button
             style="@style/TextView.GuillotineItem"
+            android:onClick="anonymousChat"
+            android:id="@+id/tvchat"
             android:text="@string/profile" />
     </LinearLayout>
 
@@ -37,10 +41,12 @@
 
         <ImageView
             style="@style/ImageView.GuillotineItem"
-            android:src="@drawable/ic_feed" />
+            android:src="@drawable/hospital" />
 
-        <com.example.android.myapplication.Widget.CanaroTextView
+        <Button
             style="@style/TextView.GuillotineItem"
+             android:id="@+id/tvhosp"
+            android:onClick="hosp"
             android:text="@string/feed" />
     </LinearLayout>
 
@@ -50,27 +56,29 @@
 
         <ImageView
             style="@style/ImageView.GuillotineItem"
-            android:src="@drawable/ic_activity_active" />
+            android:src="@drawable/logout" />
 
-        <com.example.android.myapplication.Widget.CanaroTextView
+        <Button
             style="@style/TextView.GuillotineItem.Selected"
-            android:text="@string/activity" />
+            android:onClick="login"
+            android:id="@+id/tvsignout"
+            android:text="Sign Out" />
     </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/guillotine_divider_height" />
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/guillotine_divider_height" />-->
 
-    <LinearLayout
-        android:id="@+id/settings_group"
-        style="@style/LinearLayout.GuillotineItem">
+    <!--<LinearLayout-->
+        <!--android:id="@+id/settings_group"-->
+        <!--style="@style/LinearLayout.GuillotineItem">-->
 
-        <ImageView
-            style="@style/ImageView.GuillotineItem"
-            android:src="@drawable/ic_settings" />
+        <!--<ImageView-->
+            <!--style="@style/ImageView.GuillotineItem"-->
+            <!--android:src="@drawable/ic_settings" />-->
 
-        <com.example.android.myapplication.Widget.CanaroTextView
-            style="@style/TextView.GuillotineItem"
-            android:text="@string/settings" />
-    </LinearLayout>
+        <!--<com.example.android.myapplication.Widget.CanaroTextView-->
+            <!--style="@style/TextView.GuillotineItem"-->
+            <!--android:text="@string/settings" />-->
+    <!--</LinearLayout>-->
 </LinearLayout>

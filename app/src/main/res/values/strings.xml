@@ -13,6 +13,7 @@
     <string name="profile">ANONYMOUS CHAT</string>
     <string name="feed">NEARBY HOSPITALS</string>
     <string name="activity">MIND AID</string>
+
     <string name="settings">SETTINGS</string>
     <string name="signed_in">Signed In</string>
     <string name="signed_out">Signed Out</string>

@@ -9,17 +9,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="56dp"
+        android:background="@drawable/bg"
         android:paddingLeft="24dp"
         android:paddingRight="24dp">
 
         <TextView
             android:text="Login"
             android:textColor="#fff"
-            android:textSize="40sp"
+            android:textSize="50sp"
             android:textStyle="italic"
             android:fontFamily="cursive"
             android:layout_width="wrap_content"
             android:layout_height="72dp"
+
             android:layout_marginBottom="24dp"
             android:layout_gravity="center_horizontal" />
 
@@ -56,6 +58,8 @@
             android:layout_marginTop="24dp"
             android:layout_marginBottom="24dp"
             android:padding="12dp"
+            android:background="#d0f0c0"
+
             android:text="Login"/>
 
         <Button android:id="@+id/link_signup"
@@ -64,6 +68,7 @@
             android:layout_marginBottom="24dp"
             android:text="No account yet? Create one"
             android:gravity="center"
+            android:background="#d0f0c0"
             android:textSize="16dip"/>
 
         <Button android:id="@+id/btnOtherAuth"
@@ -72,6 +77,7 @@
             android:layout_marginBottom="24dp"
             android:text="Other Auth services"
             android:gravity="center"
+            android:background="#d0f0c0"
             android:textSize="16dip"/>
 
     </LinearLayout>

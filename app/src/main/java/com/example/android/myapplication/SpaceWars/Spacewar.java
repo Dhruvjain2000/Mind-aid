@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.android.myapplication.MenuScreen;
 import com.example.android.myapplication.R;
 
 public class Spacewar extends AppCompatActivity implements View.OnTouchListener {
@@ -24,6 +25,14 @@ public class Spacewar extends AppCompatActivity implements View.OnTouchListener 
     int oldScore = 0;
     int btn = 0;
 
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(getBaseContext(),MenuScreen.class));
+        finish();
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

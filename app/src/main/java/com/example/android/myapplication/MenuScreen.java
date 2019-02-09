@@ -9,16 +9,23 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.android.myapplication.Auth.AnonymousActivity;
+import com.example.android.myapplication.Auth.LoginActivity;
 import com.example.android.myapplication.ChatApp.AnonymousChat;
 import com.example.android.myapplication.Chatbot.ChatActivity;
 import com.example.android.myapplication.Fragments.MenuListFragment;
+import com.example.android.myapplication.Maps.MapsActivity;
 import com.example.android.myapplication.Meme.MemeActivity;
 import com.example.android.myapplication.Music.MusicActivity;
 import com.example.android.myapplication.SpaceWars.Spacewar;
+import com.example.android.myapplication.Widget.CanaroTextView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.mxn.soul.flowingdrawer_core.ElasticDrawer;
 import com.mxn.soul.flowingdrawer_core.FlowingDrawer;
 import com.nightonke.boommenu.BoomButtons.ButtonPlaceEnum;
@@ -34,9 +41,12 @@ import java.util.Date;
 
 import me.itangqi.waveloadingview.WaveLoadingView;
 
-public class MenuScreen extends AppCompatActivity {
+public class MenuScreen extends AppCompatActivity implements View.OnClickListener{
 
     private static final long RIPPLE_DURATION = 250;
+    Button tvchat;
+    Button tvhosp;
+    Button tvsignout;
 
     static int[] imageResources = new int[]{
             R.drawable.emotion,
@@ -44,7 +54,6 @@ public class MenuScreen extends AppCompatActivity {
             R.drawable.robot,
             R.drawable.project,
             R.drawable.clown,
-            R.drawable.review
 
 
 
@@ -55,7 +64,6 @@ public class MenuScreen extends AppCompatActivity {
             R.string.weather,
             R.string.forum,
             R.string.buy,
-            R.string.anonymous,
 
 
 
@@ -76,13 +84,16 @@ public class MenuScreen extends AppCompatActivity {
         setContentView(R.layout.activity_menu_screen);
         String currentDateTimeString = DateFormat.getDateTimeInstance().format(new Date());
 
-        root = findViewById(R.id.root);
-        toolbar = findViewById(R.id.toolbar);
-        contentHamburger = findViewById(R.id.content_hamburger);
+
         if (toolbar != null) {
             setSupportActionBar(toolbar);
             getSupportActionBar().setTitle(null);
         }
+
+
+        root = findViewById(R.id.root);
+        toolbar = findViewById(R.id.toolbar);
+        contentHamburger = findViewById(R.id.content_hamburger);
 
         View guillotineMenu = LayoutInflater.from(this).inflate(R.layout.guillotine, null);
         root.addView(guillotineMenu);
@@ -93,6 +104,20 @@ public class MenuScreen extends AppCompatActivity {
                 .setActionBarViewForAnimation(toolbar)
                 .setClosedOnStart(true)
                 .build();
+//
+//        LayoutInflater li  = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+//        assert li != null;
+        View v = LayoutInflater.from(this).inflate(R.layout.guillotine,null);
+
+        tvchat= v.findViewById(R.id.tvchat);
+        tvhosp= v.findViewById(R.id.tvhosp);
+        tvsignout= v.findViewById(R.id.tvsignout);
+
+
+        tvchat.setOnClickListener(this);
+        tvhosp.setOnClickListener(this);
+        tvsignout.setOnClickListener(this);
+
 
         // Toast.makeText(this, currentDateTimeString, Toast.LENGTH_LONG).show();;
 
@@ -292,6 +317,35 @@ public class MenuScreen extends AppCompatActivity {
         //Toast.makeText(this, Integer.toString(pos), Toast.LENGTH_LONG).show();
                 Intent in = new Intent( this, MusicActivity.class);
                 startActivity(in);
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId())
+        {
+            case R.id.tvchat:
+
+            { anonymousChat(null); break;}
+            case R.id.tvhosp:
+            {hosp(null); break;}
+            case R.id.tvsignout:
+            {
+//                FirebaseAuth.getInstance().signOut();
+                login(null);
+                break;}
+        }    }
+
+    public void login(View v ) {
+        startActivity(new Intent(getBaseContext(),LoginActivity.class));
+        finish();
+    }
+
+    public void hosp(View v) {
+        startActivity(new Intent(this,MapsActivity.class));
+    }
+
+    public void anonymousChat(View v) {
+        startActivity(new Intent(this,AnonymousChat.class));
     }
 
 }
