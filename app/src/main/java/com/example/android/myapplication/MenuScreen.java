@@ -5,10 +5,12 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
 import com.example.android.myapplication.Fragments.MenuListFragment;
+import com.mxn.soul.flowingdrawer_core.ElasticDrawer;
 import com.mxn.soul.flowingdrawer_core.FlowingDrawer;
 import com.nightonke.boommenu.BoomButtons.ButtonPlaceEnum;
 import com.nightonke.boommenu.BoomButtons.HamButton;
@@ -57,7 +59,7 @@ public class MenuScreen extends AppCompatActivity {
         String currentDateTimeString = DateFormat.getDateTimeInstance().format(new Date());
         // Toast.makeText(this, currentDateTimeString, Toast.LENGTH_LONG).show();;
 
-        mDrawer = (FlowingDrawer) findViewById(R.id.drawerlayout);
+//        mDrawer = (FlowingDrawer) findViewById(R.id.drawerlayout);
         WaveLoadingView mWaveLoadingView = (WaveLoadingView) findViewById(R.id.waveLoadingView);
         mWaveLoadingView.setShapeType(WaveLoadingView.ShapeType.CIRCLE);
 
@@ -77,34 +79,34 @@ public class MenuScreen extends AppCompatActivity {
 
         bmb();
 
-        setupToolbar();
-        setupMenu();
-
+//        setupToolbar();
+//        setupMenu();
 
     }
 
 
-    protected void setupToolbar() {
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        toolbar.setNavigationIcon(R.drawable.ic_menu_white);
 
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mDrawer.toggleMenu();
-            }
-        });
-    }
-
-    private void setupMenu() {
-        FragmentManager fm = getSupportFragmentManager();
-        MenuListFragment mMenuFragment = (MenuListFragment) fm.findFragmentById(R.id.id_container_menu);
-        if (mMenuFragment == null) {
-            mMenuFragment = new MenuListFragment();
-            fm.beginTransaction().add(R.id.id_container_menu, mMenuFragment).commit();
-        }
-
+//    protected void setupToolbar() {
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
+//        toolbar.setNavigationIcon(R.drawable.ic_menu_white);
+//
+//        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                mDrawer.toggleMenu();
+//            }
+//        });
+//    }
+//
+//    private void setupMenu() {
+//        FragmentManager fm = getSupportFragmentManager();
+//        MenuListFragment mMenuFragment = (MenuListFragment) fm.findFragmentById(R.id.id_container_menu);
+//        if (mMenuFragment == null) {
+//            mMenuFragment = new MenuListFragment();
+//            fm.beginTransaction().add(R.id.id_container_menu, mMenuFragment).commit();
+//        }
+//
 //        mDrawer.setOnDrawerStateChangeListener(new ElasticDrawer.OnDrawerStateChangeListener() {
 //            @Override
 //            public void onDrawerStateChange(int oldState, int newState) {
@@ -118,7 +120,23 @@ public class MenuScreen extends AppCompatActivity {
 //                Log.i("MainActivity", "openRatio=" + openRatio + " ,offsetPixels=" + offsetPixels);
 //            }
 //        });
-    }
+//
+//        mDrawer = (FlowingDrawer) findViewById(R.id.drawerlayout);
+//        mDrawer.setTouchMode(ElasticDrawer.TOUCH_MODE_BEZEL);
+//        mDrawer.setOnDrawerStateChangeListener(new ElasticDrawer.OnDrawerStateChangeListener() {
+//            @Override
+//            public void onDrawerStateChange(int oldState, int newState) {
+//                if (newState == ElasticDrawer.STATE_CLOSED) {
+//                    Log.i("MenuActivity", "Drawer STATE_CLOSED");
+//                }
+//            }
+//
+//            @Override
+//            public void onDrawerSlide(float openRatio, int offsetPixels) {
+//                Log.i("MenuActivity", "openRatio=" + openRatio + " ,offsetPixels=" + offsetPixels);
+//            }
+//        });
+//    }
 
     @Override
     public void onBackPressed() {
