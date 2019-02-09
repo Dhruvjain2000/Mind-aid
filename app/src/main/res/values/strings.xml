@@ -55,6 +55,8 @@
     <string name="status_link_found">Link Not Found</string>
     <string name="map_key">AIzaSyDxRfxqFdgUlccCFu65mDq2C9Ao33G9q4A</string>
     <string name="status_email_not_sent">Email not send</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="user_profile_photo">http://baobaoloveyou.com/flowingdrawer_icon.png</string>
     <string name="passwordless_status_fmt">Passwordless Login</string>
     <string name="status_email_sent">Email Not send</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>

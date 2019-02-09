@@ -1,12 +1,49 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:custom="http://schemas.android.com/apk/res-auto"
-    android:layout_width="fill_parent"
+<!--<com.mxn.soul.flowingdrawer_core.FlowingDrawer xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:id="@+id/drawerlayout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:clipChildren="false"-->
+    <!--android:clipToPadding="false"-->
+    <!--app:edPosition="1"-->
+    <!--tools:context=".MenuScreen"-->
+    <!--app:edMenuSize="260dp"-->
+    <!--app:edMenuBackground="#dddddd">-->
+
+    <!--<android.support.design.widget.AppBarLayout android:id="@+id/appBarLayout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--&gt;-->
+    <!--<include-->
+    <!--android:id="@+id/toolbar"-->
+    <!--layout="@layout/view_feed_toolbar"/>-->
+    <!--</android.support.design.widget.AppBarLayout>-->
+
+
+    <!--<com.mxn.soul.flowingdrawer_core.FlowingMenuLayout-->
+        <!--android:id="@+id/menulayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+        <!--<FrameLayout-->
+            <!--android:id="@+id/id_container_menu"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"/>-->
+
+    <!--</com.mxn.soul.flowingdrawer_core.FlowingMenuLayout>-->
+
+
+
+<ScrollView android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:context=".MenuScreen"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#ff56d0ff"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
@@ -58,6 +95,8 @@
 
     </LinearLayout>
 
+
 </ScrollView>
 
+<!--</com.mxn.soul.flowingdrawer_core.FlowingDrawer>-->
 
