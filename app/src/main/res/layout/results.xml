@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context="com.example.yomna.symptomate.MainActivity">
+    tools:context="com.example.android.myapplication.Chatbot.ChatActivity">
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/conditions_layout"

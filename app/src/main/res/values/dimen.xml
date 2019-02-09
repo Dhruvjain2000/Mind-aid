@@ -12,4 +12,13 @@
     <dimen name="user_profile_avatar_size">88dp</dimen>
     <dimen name="global_menu_avatar_size">64dp</dimen>
     <dimen name="default_elevation">8dp</dimen>
+
+    <dimen name="guillotine_small_margin">24dp</dimen>
+    <dimen name="guillotine_medium_margin">48dp</dimen>
+    <dimen name="guillotine_large_margin">100dp</dimen>
+    <dimen name="guillotine_divider_height">40dp</dimen>
+
+    <dimen name="guillotine_item_text_size">20sp</dimen>
+    <dimen name="guillotine_actionbar_background_view_height">35dp</dimen>
+
 </resources>
