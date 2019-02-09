@@ -2,11 +2,7 @@ package com.example.android.myapplication;
 
 
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.Typeface;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.Toast;
 
 import com.codemybrainsout.onboarder.AhoyOnboarderActivity;
 import com.codemybrainsout.onboarder.AhoyOnboarderCard;
@@ -22,13 +18,17 @@ public class BoardingActivity extends AhoyOnboarderActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        AhoyOnboarderCard ahoyOnboarderCard1 = new AhoyOnboarderCard("Music Feels", "Listen to our relaxing music", R.drawable.yoga);
-        AhoyOnboarderCard ahoyOnboarderCard2 = new AhoyOnboarderCard("Dine Out", "Choose from 100's of restaurants with new spots added daily.", R.drawable.food);
-        AhoyOnboarderCard ahoyOnboarderCard3 = new AhoyOnboarderCard("Get Cashback", "Earn upto 30% each time you dine with linked cards in network.", R.drawable.reward);
+        AhoyOnboarderCard ahoyOnboarderCard1 = new AhoyOnboarderCard("Emotion Sensor", "Quantify emotions from voice using Deep Learning.", R.drawable.yoga);
+        AhoyOnboarderCard ahoyOnboarderCard2 = new AhoyOnboarderCard("Mood Detection", "Facial emotion detection using Azure.", R.drawable.food);
+        AhoyOnboarderCard ahoyOnboarderCard3 = new AhoyOnboarderCard("Anonymous Chat", "Speak your heart and vent out your emotions.", R.drawable.reward);
+        AhoyOnboarderCard ahoyOnboarderCard4 = new AhoyOnboarderCard("Many features", "Some add-on features such as Games, Music and memes.", R.drawable.reward);
+
+
 
         ahoyOnboarderCard1.setBackgroundColor(R.color.black_transparent);
         ahoyOnboarderCard2.setBackgroundColor(R.color.black_transparent);
         ahoyOnboarderCard3.setBackgroundColor(R.color.black_transparent);
+        ahoyOnboarderCard4.setBackgroundColor(R.color.black_transparent);
 
 
 
