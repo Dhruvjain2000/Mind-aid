@@ -52,6 +52,7 @@
 
         <activity android:name=".Chatbot.ChatActivity" />
         <activity android:name=".Meme.MemeActivity" />
+        <activity android:name=".ChatApp.AnonymousChat" />
     </application>
 
 </manifest>
