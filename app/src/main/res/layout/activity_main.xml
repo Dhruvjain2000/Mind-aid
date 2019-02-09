@@ -109,7 +109,7 @@
 
     </LinearLayout>
 
-    <com.projects.alshell.vokaturiandroid.PlayPauseButton
+    <com.example.android.myapplication.PlayPauseButton
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
