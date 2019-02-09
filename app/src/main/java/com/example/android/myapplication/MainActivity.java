@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Vokaturi vokaturiApi;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {

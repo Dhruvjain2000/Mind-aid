@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Mind Aid</string>
     <string name="hint_user_id">User ID</string>
     <string name="get_custom_token">Get Token</string>
     <string name="sign_in">Sign In</string>
@@ -10,6 +10,10 @@
     <string name="disconnect">Disconnect</string>
     <string name="loading">Loading…</string>
     <string name="custom_token">Custom Token</string>
+    <string name="profile">PROFILE</string>
+    <string name="feed">FEED</string>
+    <string name="activity">ACTIVITY</string>
+    <string name="settings">SETTINGS</string>
     <string name="signed_in">Signed In</string>
     <string name="signed_out">Signed Out</string>
     <string name="token_null">Token: null</string>

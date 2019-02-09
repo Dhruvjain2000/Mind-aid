@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.android.myapplication.R;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.common.SignInButton;
 
 public class DifferentAuth extends AppCompatActivity implements View.OnClickListener {
@@ -36,7 +37,7 @@ public class DifferentAuth extends AppCompatActivity implements View.OnClickList
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.signInGoogle : {
-
+                startActivity(new Intent(getBaseContext(),GoogleSignInActivity.class));
                 break;
             }
 
@@ -46,12 +47,12 @@ public class DifferentAuth extends AppCompatActivity implements View.OnClickList
             }
 
             case R.id.btnEmailLink : {
-
+                startActivity(new Intent(getBaseContext(),PasswordlessActivity.class));
                 break;
             }
 
             case R.id.btnAnonymous : {
-
+                startActivity(new Intent(getBaseContext(),AnonymousActivity.class));
                 break;
             }
 

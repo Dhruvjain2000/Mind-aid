@@ -34,19 +34,60 @@
     <!--</com.mxn.soul.flowingdrawer_core.FlowingMenuLayout>-->
 
 
-
-<ScrollView android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+<FrameLayout android:layout_width="fill_parent"
+    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="#ff56d0ff"
+   android:id="@+id/root"
+    android:orientation="vertical"
+    tools:context=".MenuScreen"
     android:fillViewport="true"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
 
 
+        <View
+            android:layout_gravity="top"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/guillotine_actionbar_background_view_height"
+            android:background="@color/guillotine_background"
+            />
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            app:contentInsetStart="0dp"
+            style="@style/Toolbar">
+
+            <ImageView
+                android:id="@+id/content_hamburger"
+                style="@style/ImageView.Hamburger"
+                android:src="@drawable/ic_menu_90"
+                android:contentDescription="0" />
+
+            <com.example.android.myapplication.Widget.CanaroTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/activity"
+                android:textSize="@dimen/guillotine_item_text_size" />
+        </android.support.v7.widget.Toolbar>
+
+
+    <!--<FrameLayout-->
+        <!--android:id="@+id/root"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/guillotine_background_dark"-->
+        <!--android:orientation="vertical">-->
+     <!---->
+
+
+<!--</FrameLayout>-->
+
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
         <me.itangqi.waveloadingview.WaveLoadingView
             android:id="@+id/waveLoadingView"
@@ -66,22 +107,17 @@
             app:wlv_waveAmplitude="70"
             app:wlv_waveColor="@color/colorAccent"
             android:layout_marginTop="50dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
             android:background="@drawable/the"
             android:layout_gravity="center_horizontal|top" />
 
         <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_below="@+id/spinner"
-            android:layout_marginTop="5px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:gravity="right|bottom"
             android:orientation="vertical"
-            android:paddingTop="2px">
-
-
-
+            android:paddingTop="2dp"
+            tools:ignore="RtlHardcoded">
 
             <com.nightonke.boommenu.BoomMenuButton
                 android:id="@+id/bmb"
@@ -96,7 +132,7 @@
     </LinearLayout>
 
 
-</ScrollView>
+</FrameLayout>
 
 <!--</com.mxn.soul.flowingdrawer_core.FlowingDrawer>-->
 

@@ -7,7 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.example.android.myapplication.Chatbot.ChatActivity;
@@ -23,6 +25,7 @@ import com.nightonke.boommenu.BoomButtons.OnBMClickListener;
 import com.nightonke.boommenu.BoomMenuButton;
 import com.nightonke.boommenu.ButtonEnum;
 import com.nightonke.boommenu.Piece.PiecePlaceEnum;
+import com.yalantis.guillotine.animation.GuillotineAnimation;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -30,6 +33,9 @@ import java.util.Date;
 import me.itangqi.waveloadingview.WaveLoadingView;
 
 public class MenuScreen extends AppCompatActivity {
+
+    private static final long RIPPLE_DURATION = 250;
+
     static int[] imageResources = new int[]{
             R.drawable.robot,
             R.drawable.news,
@@ -53,6 +59,9 @@ public class MenuScreen extends AppCompatActivity {
     };
 
     private FlowingDrawer mDrawer;
+    Toolbar toolbar;
+    FrameLayout root;
+    View contentHamburger;
 
 
     static int imageResourceIndex = 0;
@@ -62,6 +71,25 @@ public class MenuScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_screen);
         String currentDateTimeString = DateFormat.getDateTimeInstance().format(new Date());
+
+        root = findViewById(R.id.root);
+        toolbar = findViewById(R.id.toolbar);
+        contentHamburger = findViewById(R.id.content_hamburger);
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
+            getSupportActionBar().setTitle(null);
+        }
+
+        View guillotineMenu = LayoutInflater.from(this).inflate(R.layout.guillotine, null);
+        root.addView(guillotineMenu);
+
+
+        new GuillotineAnimation.GuillotineBuilder(guillotineMenu, guillotineMenu.findViewById(R.id.guillotine_hamburger), contentHamburger)
+                .setStartDelay(RIPPLE_DURATION)
+                .setActionBarViewForAnimation(toolbar)
+                .setClosedOnStart(true)
+                .build();
+
         // Toast.makeText(this, currentDateTimeString, Toast.LENGTH_LONG).show();;
 
 //        mDrawer = (FlowingDrawer) findViewById(R.id.drawerlayout);
