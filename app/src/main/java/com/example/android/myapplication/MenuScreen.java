@@ -12,6 +12,8 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
+import com.example.android.myapplication.Auth.AnonymousActivity;
+import com.example.android.myapplication.ChatApp.AnonymousChat;
 import com.example.android.myapplication.Chatbot.ChatActivity;
 import com.example.android.myapplication.Fragments.MenuListFragment;
 import com.example.android.myapplication.Meme.MemeActivity;
@@ -37,11 +39,12 @@ public class MenuScreen extends AppCompatActivity {
     private static final long RIPPLE_DURATION = 250;
 
     static int[] imageResources = new int[]{
+            R.drawable.emotion,
+            R.drawable.music_player,
             R.drawable.robot,
-            R.drawable.news,
-            R.drawable.cloudy,
-            R.drawable.smartphone,
-            R.drawable.cart,
+            R.drawable.project,
+            R.drawable.clown,
+            R.drawable.review
 
 
 
@@ -52,6 +55,7 @@ public class MenuScreen extends AppCompatActivity {
             R.string.weather,
             R.string.forum,
             R.string.buy,
+            R.string.anonymous,
 
 
 
@@ -232,7 +236,12 @@ public class MenuScreen extends AppCompatActivity {
                             if (index == 4) {
                                 buy(index);
                             }
+                            if(index == 5)
+                            { anonymous(index);
+                            }
                         }
+
+
                     })
 
                     .normalImageRes(getImageResource());
@@ -270,6 +279,12 @@ public class MenuScreen extends AppCompatActivity {
        // Toast.makeText(this, Integer.toString(pos), Toast.LENGTH_LONG).show();
                 Intent in = new Intent( this, MemeActivity.class);
                 startActivity(in);
+    }
+    public void anonymous(int pos)
+    {
+        // Toast.makeText(this, Integer.toString(pos), Toast.LENGTH_LONG).show();
+        Intent in = new Intent( this, AnonymousChat.class);
+        startActivity(in);
     }
 
     public void ordering(int pos)
