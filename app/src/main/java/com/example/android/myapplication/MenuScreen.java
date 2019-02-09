@@ -1,5 +1,6 @@
 package com.example.android.myapplication;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
@@ -9,7 +10,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.android.myapplication.Chatbot.ChatActivity;
 import com.example.android.myapplication.Fragments.MenuListFragment;
+import com.example.android.myapplication.Meme.MemeActivity;
+import com.example.android.myapplication.Music.MusicActivity;
+import com.example.android.myapplication.SpaceWars.Spacewar;
 import com.mxn.soul.flowingdrawer_core.ElasticDrawer;
 import com.mxn.soul.flowingdrawer_core.FlowingDrawer;
 import com.nightonke.boommenu.BoomButtons.ButtonPlaceEnum;
@@ -216,34 +221,34 @@ public class MenuScreen extends AppCompatActivity {
     }
     public void start(int pos)
     {
-        Toast.makeText(this, Integer.toString(pos), Toast.LENGTH_LONG).show();
-        //        Intent in = new Intent( this, MainActivity.class);
-        //        startActivity(in);
+        //Toast.makeText(this, Integer.toString(pos), Toast.LENGTH_LONG).show();
+                Intent in = new Intent( this, MainActivity.class);
+                startActivity(in);
     }
     public void stock(int pos)
     {
-        Toast.makeText(this, Integer.toString(pos), Toast.LENGTH_LONG).show();
-        //        Intent in = new Intent( this, sunmain.class);
-        //        startActivity(in);
+       // Toast.makeText(this, Integer.toString(pos), Toast.LENGTH_LONG).show();
+             Intent in = new Intent( this, ChatActivity.class);
+              startActivity(in);
     }
     public void sales(int pos)
     {
-        Toast.makeText(this, Integer.toString(pos), Toast.LENGTH_LONG).show();
-        //        Intent in = new Intent( this, forum.class);
-        //        startActivity(in);
+        //Toast.makeText(this, Integer.toString(pos), Toast.LENGTH_LONG).show();
+               Intent in = new Intent( this, Spacewar.class);
+                startActivity(in);
     }
     public void buy(int pos)
     {
-        Toast.makeText(this, Integer.toString(pos), Toast.LENGTH_LONG).show();
-        //        Intent in = new Intent( this, orders.class);
-        //        startActivity(in);
+       // Toast.makeText(this, Integer.toString(pos), Toast.LENGTH_LONG).show();
+                Intent in = new Intent( this, MemeActivity.class);
+                startActivity(in);
     }
 
     public void ordering(int pos)
     {
-        Toast.makeText(this, Integer.toString(pos), Toast.LENGTH_LONG).show();
-        //        Intent in = new Intent( this, newsmain.class);
-        //        startActivity(in);
+        //Toast.makeText(this, Integer.toString(pos), Toast.LENGTH_LONG).show();
+                Intent in = new Intent( this, MusicActivity.class);
+                startActivity(in);
     }
 
 }

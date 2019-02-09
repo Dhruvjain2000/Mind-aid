@@ -41,12 +41,12 @@
     <string name="title_activity_createlisting">createlisting</string>
     <string name="title_activity_orders">orders</string>
     <string name="google_title_text">Google Sign In</string>
-    <string name="news">News</string>
-    <string name="buy">Buy A Product</string>
-    <string name="voice">Personal Assistant</string>
-    <string name="weather">Weather Forecast</string>
+    <string name="news">Relaxing Songs</string>
+    <string name="buy">Mind Refreshing Memes</string>
+    <string name="voice">Emotion Sensor</string>
+    <string name="weather">Chatbot</string>
     <string name="facebook_title_text">Facebook Login</string>
-    <string name="forum">Forums</string>
+    <string name="forum">Games</string>
     <string name="passwordless_title_text">Passwordless Sign In</string>
     <string name="weathers">Weather Forecast</string>
     <string name="label_google_sign_in">Firebase + Google Sign In</string>

@@ -22,7 +22,7 @@ public class BoardingActivity extends AhoyOnboarderActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        AhoyOnboarderCard ahoyOnboarderCard1 = new AhoyOnboarderCard("Link Cards", "Sign up for free by activating your credit cards.", R.drawable.spend);
+        AhoyOnboarderCard ahoyOnboarderCard1 = new AhoyOnboarderCard("Music Feels", "Listen to our relaxing music", R.drawable.yoga);
         AhoyOnboarderCard ahoyOnboarderCard2 = new AhoyOnboarderCard("Dine Out", "Choose from 100's of restaurants with new spots added daily.", R.drawable.food);
         AhoyOnboarderCard ahoyOnboarderCard3 = new AhoyOnboarderCard("Get Cashback", "Earn upto 30% each time you dine with linked cards in network.", R.drawable.reward);
 
@@ -46,7 +46,7 @@ public class BoardingActivity extends AhoyOnboarderActivity {
         setFinishButtonTitle("Get Started");
         showNavigationControls(true);
         //setGradientBackground();
-        setImageBackground(R.drawable.download);
+        setImageBackground(R.drawable.board3);
 
 //        Typeface face = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
         //setFont(face);
