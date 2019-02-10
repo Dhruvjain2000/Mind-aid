@@ -85,6 +85,9 @@ public class MainActivity extends AppCompatActivity {
 
         actionStatus = (TextView) findViewById(R.id.actionStatus);
 
+        textViewFear.setVisibility(View.GONE);
+        progressBarFear.setVisibility(View.GONE);
+
     }
 
     private void setListeners()
@@ -136,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
         progressBarHappiness.setIndeterminate(true);
         progressBarSadness.setIndeterminate(true);
         progressBarAnger.setIndeterminate(true);
-        progressBarFear.setIndeterminate(true);
+//        progressBarFear.setIndeterminate(true);
         emojiEmotionImageView.setImageDrawable(getResources().getDrawable(R.drawable.emoji_default));
     }
 
@@ -168,7 +171,7 @@ public class MainActivity extends AppCompatActivity {
         progressBarHappiness.setIndeterminate(false);
         progressBarSadness.setIndeterminate(false);
         progressBarAnger.setIndeterminate(false);
-        progressBarFear.setIndeterminate(false);
+//        progressBarFear.setIndeterminate(false);
     }
 
 
@@ -178,18 +181,18 @@ public class MainActivity extends AppCompatActivity {
         emotionProbabilities.scaledValues(5);
 
         logD("showMetrics for, " + emotionProbabilities.toString());
-        textViewNeutrality.setText("Neutrality: " + emotionProbabilities.Neutrality);
-        textViewHappiness.setText("Happiness: " + emotionProbabilities.Happiness);
-        textViewSadness.setText("Sadness: " + emotionProbabilities.Sadness);
+        textViewNeutrality.setText("Neutrality: " + emotionProbabilities.Sadness);
+        textViewHappiness.setText("Happiness: " + emotionProbabilities.Fear);
+        textViewSadness.setText("Sadness: " + emotionProbabilities.Neutrality);
         textViewAnger.setText("Anger: " + emotionProbabilities.Anger);
-        textViewFear.setText("Fear: " + emotionProbabilities.Fear);
+//        textViewFear.setText("Fear: " + emotionProbabilities.Fear);
 
         showEmojiBasedOnMetrics(emotionProbabilities);
-        progressBarNeutrality.setProgress(normalizeForProgressBar(emotionProbabilities.Neutrality));
-        progressBarHappiness.setProgress(normalizeForProgressBar(emotionProbabilities.Happiness));
-        progressBarSadness.setProgress(normalizeForProgressBar(emotionProbabilities.Sadness));
+        progressBarNeutrality.setProgress(normalizeForProgressBar(emotionProbabilities.Sadness));
+        progressBarHappiness.setProgress(normalizeForProgressBar(emotionProbabilities.Fear));
+        progressBarSadness.setProgress(normalizeForProgressBar(emotionProbabilities.Neutrality));
         progressBarAnger.setProgress(normalizeForProgressBar(emotionProbabilities.Anger));
-        progressBarFear.setProgress(normalizeForProgressBar(emotionProbabilities.Fear));
+//        progressBarFear.setProgress(normalizeForProgressBar(emotionProbabilities.Fear));
 
     }
 
@@ -208,14 +211,14 @@ public class MainActivity extends AppCompatActivity {
         Emotion capturedEmotion = Vokaturi.extractEmotion(emotionProbabilities);
         if(capturedEmotion == Emotion.Neutral)
         {
-            emojiEmotionImageView.setImageDrawable(getResources().getDrawable(R.drawable.emoji_neutral));
+            emojiEmotionImageView.setImageDrawable(getResources().getDrawable(R.drawable.emoji_sadness));
         } else if(capturedEmotion == Emotion.Happy)
         {
-            emojiEmotionImageView.setImageDrawable(getResources().getDrawable(R.drawable.emoji_happiness));
+//            emojiEmotionImageView.setImageDrawable(getResources().getDrawable(R.drawable.emoji_happiness));
         }
         else if(capturedEmotion == Emotion.Sad)
         {
-            emojiEmotionImageView.setImageDrawable(getResources().getDrawable(R.drawable.emoji_sadness));
+            emojiEmotionImageView.setImageDrawable(getResources().getDrawable(R.drawable.emoji_neutral));
         }
         else if(capturedEmotion == Emotion.Angry)
         {
@@ -223,7 +226,7 @@ public class MainActivity extends AppCompatActivity {
         }
         else if(capturedEmotion == Emotion.Feared)
         {
-            emojiEmotionImageView.setImageDrawable(getResources().getDrawable(R.drawable.emoji_fear));
+            emojiEmotionImageView.setImageDrawable(getResources().getDrawable(R.drawable.emoji_happiness));
         }
     }
 
