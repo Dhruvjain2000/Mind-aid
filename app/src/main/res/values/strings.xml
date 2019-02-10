@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Mind Aid</string>
+    <string name="app_name">MindMate</string>
     <string name="hint_user_id">User ID</string>
     <string name="get_custom_token">Get Token</string>
     <string name="sign_in">Sign In</string>
@@ -12,7 +12,7 @@
     <string name="custom_token">Custom Token</string>
     <string name="profile">ANONYMOUS CHAT</string>
     <string name="feed">NEARBY HOSPITALS</string>
-    <string name="activity">MIND AID</string>
+    <string name="activity">MindMate</string>
 
     <string name="settings">SETTINGS</string>
     <string name="signed_in">Signed In</string>

@@ -1,5 +1,6 @@
 package com.example.android.myapplication;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.support.v4.app.FragmentManager;
@@ -9,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
@@ -45,8 +47,10 @@ public class MenuScreen extends AppCompatActivity implements View.OnClickListene
 
     private static final long RIPPLE_DURATION = 250;
     Button tvchat;
+    Button tvpaytm;
     Button tvhosp;
     Button tvsignout;
+    private WebView chatWindow;
 
     static int[] imageResources = new int[]{
             R.drawable.emotion,
@@ -110,11 +114,13 @@ public class MenuScreen extends AppCompatActivity implements View.OnClickListene
         View v = LayoutInflater.from(this).inflate(R.layout.guillotine,null);
 
         tvchat= v.findViewById(R.id.tvchat);
+        tvpaytm= v.findViewById(R.id.tvpaytm);
         tvhosp= v.findViewById(R.id.tvhosp);
         tvsignout= v.findViewById(R.id.tvsignout);
 
 
         tvchat.setOnClickListener(this);
+        tvpaytm.setOnClickListener(this);
         tvhosp.setOnClickListener(this);
         tvsignout.setOnClickListener(this);
 
@@ -323,8 +329,12 @@ public class MenuScreen extends AppCompatActivity implements View.OnClickListene
     public void onClick(View view) {
         switch (view.getId())
         {
+            case R.id.tvpaytm:
+            {
+                paytm(null);
+                break;
+            }
             case R.id.tvchat:
-
             { anonymousChat(null); break;}
             case R.id.tvhosp:
             {hosp(null); break;}
@@ -333,15 +343,22 @@ public class MenuScreen extends AppCompatActivity implements View.OnClickListene
 //                FirebaseAuth.getInstance().signOut();
                 login(null);
                 break;}
-        }    }
+
+
+        }
+    }
 
     public void login(View v ) {
         startActivity(new Intent(getBaseContext(),LoginActivity.class));
-        finish();
+        //finish();
     }
 
     public void hosp(View v) {
         startActivity(new Intent(this,MapsActivity.class));
+    }
+    public void paytm(View v) {
+        Toast.makeText(this,"Paytm ",Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this,PaytmActivity.class));
     }
 
     public void anonymousChat(View v) {

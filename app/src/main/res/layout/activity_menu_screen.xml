@@ -38,7 +38,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#ff56d0ff"
+    android:background="#FFD700"
    android:id="@+id/root"
     android:orientation="vertical"
     tools:context=".MenuScreen"
@@ -92,7 +92,13 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+
         android:orientation="vertical">
+        <!--<ImageView-->
+            <!--android:layout_width="382dp"-->
+            <!--android:layout_height="432dp"-->
+            <!--android:src="@drawable/logo_final"/>-->
+
         <me.itangqi.waveloadingview.WaveLoadingView
             android:id="@+id/waveLoadingView"
             android:layout_width="382dp"
@@ -118,6 +124,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+
             android:gravity="right|bottom"
             android:orientation="vertical"
             android:paddingTop="2dp"

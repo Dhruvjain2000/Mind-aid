@@ -19,8 +19,8 @@ public class BoardingActivity extends AhoyOnboarderActivity {
         super.onCreate(savedInstanceState);
 
         AhoyOnboarderCard ahoyOnboarderCard1 = new AhoyOnboarderCard("Emotion Sensor", "Quantify emotions from voice using Deep Learning.", R.drawable.smile);
-        AhoyOnboarderCard ahoyOnboarderCard2 = new AhoyOnboarderCard("Mood Detection", "Facial emotion detection using Azure.", R.drawable.food);
-        AhoyOnboarderCard ahoyOnboarderCard3 = new AhoyOnboarderCard("Anonymous Chat", "Speak your heart and vent out your emotions.", R.raw.chatting);
+        AhoyOnboarderCard ahoyOnboarderCard2 = new AhoyOnboarderCard("Mood Detection", "Facial emotion detection using Azure.", R.drawable.masks);
+        AhoyOnboarderCard ahoyOnboarderCard3 = new AhoyOnboarderCard("Anonymous Chat", "Speak your heart and vent out your emotions.", R.drawable.conversation);
         AhoyOnboarderCard ahoyOnboarderCard4 = new AhoyOnboarderCard("Many features", "Some add-on features such as Games, Music and memes.", R.drawable.reward);
 
 

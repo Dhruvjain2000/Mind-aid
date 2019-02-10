@@ -29,7 +29,7 @@ public class PlayPauseButton extends View
     private ValueAnimator mRightEdgeAnimator;
     private boolean mPlayed;
 
-    private int mBackgroundColor = Color.RED;
+    private int mBackgroundColor = R.color.colorPrimary;
 
     private ValueAnimator.AnimatorUpdateListener mAnimatorUpdateListener =
             new ValueAnimator.AnimatorUpdateListener() {

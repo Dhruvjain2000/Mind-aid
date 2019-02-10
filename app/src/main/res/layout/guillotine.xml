@@ -51,6 +51,20 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/paytm_group"
+        style="@style/LinearLayout.GuillotineItem">
+
+        <ImageView
+            style="@style/ImageView.GuillotineItem"
+            android:src="@drawable/money" />
+
+        <Button
+            style="@style/TextView.GuillotineItem.Selected"
+            android:onClick="paytm"
+            android:id="@+id/tvpaytm"
+            android:text="Paytm Karo!!" />
+    </LinearLayout>
+    <LinearLayout
         android:id="@+id/activity_group"
         style="@style/LinearLayout.GuillotineItem">
 
